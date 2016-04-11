@@ -1,0 +1,13 @@
+.classfieldset{
+  float:left;
+
+  border: 2px groove;
+  width: 300px;
+  padding: 1em;
+  margin-top: 1em;
+}
+label{
+  display: block;
+  float: left;
+  width: 250px;
+}
