@@ -15,6 +15,11 @@
     <!-- directive -->
     <script src="Directives\musician.js"></script>
   </head>
+  <nav>
+    <img src="images/technology.png" style="margin-bottom:3em;" alt="" />
+  </nav>
+
+  </header>
   <body ng-app="app">
   <div ng-controller="mainController">
       <input type="number" ng-model="limitation" placeholder="choisissez le nombre des musiciens a afficher "/>
@@ -22,19 +27,22 @@
       <form name="newMusicianForm">
         <fieldset class="classfieldset">
          <label for="name">Nom et Prenom de l'artiste</label>
-         <input type="text" id="name" ng-model="newMusician.fullName">
+         <input type="text" id="name" ng-model="newMusician.fullName"><br>
          <label for="titre">Titre de l'artiste</label>
          <input type="text" id="titre" ng-model="newMusician.title">
          <button type="submit" ng-click="addMusician(newMusician)">Creer</button>
         </fieldset>
       </form>
-        <div ng-repeat="musician in musicians | limitTo:limitation | filter:lettres">
+        <div ng-repeat="m in musicians | limitTo:limitation | filter:lettres">
         <div style="margin-top:5em;">
-          <musician/>
+          <musician artist="m"/>
         </div>
       </div>
       <br>
 
+  </div>
+  <div style="float:left">
+    <musician artist="{ id:'6' ,fullName:'AmenAllah',title:'Love discuss'}"/>
   </div>
 </body>
 
