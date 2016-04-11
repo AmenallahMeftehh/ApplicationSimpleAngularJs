@@ -1,9 +1,9 @@
 .classfieldset{
 position: relative;
   border: 2px groove;
-  width: 300px;
-  padding: 1em;
-  margin-top: 1em;
+  width: 400px;
+  padding: 1.5em;
+  margin: 1em;
 }
 body{
   background-image: url("../images/note-de-musique-161085.jpg" ) ;
@@ -12,7 +12,15 @@ body{
   background-size: cover;
 
  }
-
+ image{
+   margin:30px;
+   float: left;
+ }
+ul{
+  float:right;
+  display: block;
+  position: relative;
+}
 label{
   display: block;
   float: left;
