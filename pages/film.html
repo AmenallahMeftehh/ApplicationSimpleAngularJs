@@ -1,3 +1,14 @@
 <div>
 
+<fieldset class="classfieldset">
+<input type="text" placeholder="Cherchez votre film" ng-model="lettres">
+</fieldset>
+<div ng-repeat = "f in films | filter:lettres">
+  <div class="musInfo">
+    <h3>{{f.title}}</h3>
+    <h6>{{f.acteur}}</h6>
+    <img ng-src="images/film/{{f.image}}"/>
+  </div>
+</div>
+
 </div>

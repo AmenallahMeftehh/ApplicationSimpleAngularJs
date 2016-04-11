@@ -12,7 +12,7 @@ var addFilm = function(film){
   films.push({title:film.title,image:film.image,realisateur:film.realisateur,acteur:film.acteur})
 };
 return{
-  getFilm:getFilm,
+  getFilms:getFilms,
   addFilm:addFilm
 }
 });
