@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Musicien</title>
+    <script src="libs/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/mainController.js"></script>
+
+    </script>
+  </head>
+  <body ng-app="app">
+
+      <table ng-controller="mainController">
+        <tr ng-repeat="musician in musicians">
+          <td>{{musician.id}} : {{musician.fullName}} : {{musician.title}} </td>
+        </tr>
+      </table>
+    <h1>{{message}}</h1>
+
+  </body>
+
+</html>
