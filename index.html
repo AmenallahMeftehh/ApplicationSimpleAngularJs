@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Musicien</title>
     <!-- css -->
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" type="text/css" href="css/style.css" >
     <!-- angular -->
     <script src="libs/angular.js"></script>
     <script src="app.js"></script>
@@ -12,26 +12,29 @@
     <script src="Controllers/mainController.js"></script>
     <!-- services -->
     <script src="Services/musiciansFactory.js"></script>
-
+    <!-- directive -->
+    <script src="Directives\musician.js"></script>
   </head>
   <body ng-app="app">
   <div ng-controller="mainController">
       <input type="number" ng-model="limitation" placeholder="choisissez le nombre des musiciens a afficher "/>
       <input type="text" ng-model="lettres" placeholder="Recherche par letter"/>
-      <table>
-        <tr ng-repeat="musician in musicians | limitTo:limitation | filter:lettres">
-          <td> {{musician.fullName}} : {{musician.title}} </td>
-        </tr>
-      </table>
-    <form name="newMusicianForm">
-      <fieldset class="classfieldset">
-       <label for="name">Nom et Prenom de l'artiste</label>
-       <input type="text" id="name" ng-model="newMusician.fullName">
-       <label for="titre">Titre de l'artiste</label>
-       <input type="text" id="titre" ng-model="newMusician.title">
-       <button type="submit" ng-click="addMusician(newMusician)">Creer</button>
-      </fieldset>
-    </form>
+      <form name="newMusicianForm">
+        <fieldset class="classfieldset">
+         <label for="name">Nom et Prenom de l'artiste</label>
+         <input type="text" id="name" ng-model="newMusician.fullName">
+         <label for="titre">Titre de l'artiste</label>
+         <input type="text" id="titre" ng-model="newMusician.title">
+         <button type="submit" ng-click="addMusician(newMusician)">Creer</button>
+        </fieldset>
+      </form>
+        <div ng-repeat="musician in musicians | limitTo:limitation | filter:lettres">
+        <div style="margin-top:5em;">
+          <musician/>
+        </div>
+      </div>
+      <br>
+
   </div>
 </body>
 
