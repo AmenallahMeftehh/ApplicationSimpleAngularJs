@@ -15,24 +15,24 @@
 
   </head>
   <body ng-app="app">
+  <div ng-controller="mainController">
       <input type="number" ng-model="limitation" placeholder="choisissez le nombre des musiciens a afficher "/>
       <input type="text" ng-model="lettres" placeholder="Recherche par letter"/>
-      <table ng-controller="mainController">
+      <table>
         <tr ng-repeat="musician in musicians | limitTo:limitation | filter:lettres">
-          <td>{{musician.id}} : {{musician.fullName}} : {{musician.title}} </td>
+          <td> {{musician.fullName}} : {{musician.title}} </td>
         </tr>
       </table>
-    <form>
+    <form name="newMusicianForm">
       <fieldset class="classfieldset">
-       <label for="id">Identifiant de l'artiste</label>
-       <input type="text" id="id">
        <label for="name">Nom et Prenom de l'artiste</label>
-       <input type="text" id="name">
+       <input type="text" id="name" ng-model="newMusician.fullName">
        <label for="titre">Titre de l'artiste</label>
-       <input type="text" id="titre">
+       <input type="text" id="titre" ng-model="newMusician.title">
+       <button type="submit" ng-click="addMusician(newMusician)">Creer</button>
       </fieldset>
     </form>
-
-  </body>
+  </div>
+</body>
 
 </html>

@@ -9,8 +9,17 @@ var musicians=[
 var getMusicians = function(){
   return musicians;
 };
+var addMusician = function(musician){
+musician = preMusician(musician);
+musicians.push({id:musician.id,fullName:musician.fullName,title:musician.title})
+}
+function preMusician(musician){
+  musician.id=musicians.length+1;
+  return musician;
+}
 return{
-  getMusicians: getMusicians
+  getMusicians: getMusicians,
+  addMusician :addMusician
 };
 
 
