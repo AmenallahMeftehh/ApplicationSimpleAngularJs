@@ -1,9 +1,12 @@
-<div >
-  <fieldset class="classfieldset">
+<div>
+<div class="col-md-12">
+  <fieldset class="classfieldset col-md-4">
     <input type="number" ng-model="limitation" placeholder="choisissez le nombre des musiciens a afficher "/>
     <input type="text" ng-model="lettres" placeholder="Recherche par letter"/>
   </fieldset>
-  <fieldset  class="classfieldset">
+  <div class="col-md-2">
+  </div>
+  <fieldset  class="classfieldset col-md-6">
        <label for="name">Nom et Prenom de l'artiste</label>
        <input type="text" id="name" ng-model="newMusician.fullName"><br>
        <label for="titre">Titre de l'artiste</label>
@@ -12,8 +15,8 @@
        <input type="text" id="image" ng-model="newMusician.image"> -->
        <button class="btn btn-primary"type="submit" ng-click="addMusician(newMusician)">Ajoutez un artiste</button>
   </fieldset>
-
-      <div  style="float:left" ng-repeat="m in musicians | limitTo:limitation | filter:lettres">
+</div>
+      <div  class="col-md-4" style="float:left" ng-repeat="m in musicians | limitTo:limitation | filter:lettres">
         <div >
           <musician artist="m"/>
         </div>

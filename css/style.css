@@ -17,14 +17,15 @@ position: relative;
     padding: 1.5em;
 }
 body{
-  background-image: url("../images/note-de-musique-161085.jpg" ) ;
+
+  background-image: url("../images/background6.jpg" ) ;
 	font-family: 'Lato', helvetica, arial, sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
  }
  .imageArtist{
-   width: 120px;
-   height: 160px;
+   width: 220px;
+   height: 260px;
    padding-left: 2.5em;
  }
  image{
@@ -41,12 +42,15 @@ label{
   width: 250px;
 }
 .musInfo{
-  width: 15em;
-  height: 20em;
-  background-color: grey;
+  width: 25em;
+  height: 30em;
+  background-color: white;
   padding: 1em;
   margin: 0.5em;
-float: left;
+  float: left;
+  border: 2px groove ;
+  border-radius: 4px;
+  border-color: grey;
 }
 .SerieInfo{
   width: 25em;
@@ -54,8 +58,15 @@ float: left;
   background-color: white;
   padding: 1em;
   margin: 0.5em;
-float: left;
+  float: left;
+  border: 2px groove ;
+  border-radius: 4px;
+  border-color: grey;
 }
 p{
   padding: 2em;
+}
+.limenu{
+  text-shadow: 1px 1px 2px #0B0B61;
+  font-size: 20px;
 }
