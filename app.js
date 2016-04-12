@@ -9,6 +9,10 @@ angular.module('app',['ngRoute']).config(['$routeProvider',
             templateUrl: 'pages/film.html',
             controller: 'filmController'
           }).
+          when('/series', {
+            templateUrl: 'pages/series.html',
+            controller: 'serieController'
+          }).
           otherwise({
             redirectTo: '/index.'
           });

@@ -1,0 +1,22 @@
+<div>
+<fieldset class="classfieldset">
+  <input type="text" ng-model='limitation' placeholder="limiter la collection des séries">
+<input type="text" ng-model='parlettre' placeholder="Cherchez votre série">
+</fieldset>
+<fieldset class="classfieldsetserie">
+<label for="nom">Nom :</label>
+<input type='text' placeholder="Nom de la série" ng-model="newserie.nom" id="nom">
+<label for="description">Description :</label>
+<textarea id="description" rows="3" cols="40" ng-model="newserie.description"></textarea>
+<button type="submit" ng-click="addSerie(newserie)" class="btn btn-primary">
+  Ajouter une série</button>
+</fieldset>
+<div  ng-repeat="s in series | limitTo: limitation | filter: parlettre">
+<div class="SerieInfo">
+<h3>{{s.nom}}</h3>
+<img ng-src="images/series/{{s.image}}"/>
+<p>
+  {{s.description}}
+</p>
+  </div>
+</div>
