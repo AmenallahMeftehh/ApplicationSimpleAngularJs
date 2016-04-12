@@ -3,7 +3,12 @@ position: relative;
   border: 2px groove;
   width: 400px;
   padding: 1.5em;
-  margin: 1em;
+}
+.classfieldsetfilm{
+  position: relative;
+    border: 2px groove;
+    width: 500px;
+    padding: 1.5em;
 }
 body{
   background-image: url("../images/note-de-musique-161085.jpg" ) ;
@@ -22,7 +27,6 @@ body{
  }
 ul{
   float:right;
-
   position: relative;
 }
 label{
@@ -36,5 +40,5 @@ label{
   background-color: grey;
   padding: 1em;
   margin: 0.5em;
-  float: left;
+float: left;
 }

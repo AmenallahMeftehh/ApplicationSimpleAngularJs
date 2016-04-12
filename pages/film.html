@@ -3,6 +3,15 @@
 <fieldset class="classfieldset">
 <input type="text" placeholder="Cherchez votre film" ng-model="lettres">
 </fieldset>
+<fieldset class="classfieldsetfilm">
+  <label for="title">Nom du film</label>
+  <input style="margin:0.4em"type="text" id="title" placeholder="Entrez le nom du film" ng-model="newfilm.title">
+  <label for="realisateur">Realisateur</label>
+  <input style="margin:0.4em"type="text" id="realisateur" placeholder="Entrez le nom du realisateur" ng-model="newfilm.realisateur">
+  <label for="acteur">Acteur</label>
+  <input style="margin:0.4em" type="text" id="acteur" placeholder="Entrez le nom de l'acteur principale" ng-model="newfilm.acteur">
+  <button type="submit" ng-click="addFilm(newfilm)">Ajouter un film</button>
+</fieldset>
 <div ng-repeat = "f in films | filter:lettres">
   <div class="musInfo">
     <h3>{{f.title}}</h3>
