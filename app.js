@@ -1,20 +1,54 @@
 angular.module('app',['ngRoute']).config(['$routeProvider',
   function($routeProvider){
     $routeProvider.
-          when('/musique', {
+          when('/musique', { resolve: {
+            "check" : function($location, $rootScope){
+              if(!$rootScope.isLogin){
+                  $location.path('/login');
+              }
+          }
+      },
             templateUrl: 'pages/musique.html',
             controller: 'mainController'
           }).
-          when('/film', {
+          when('/film', { resolve: {
+            "check" : function($location, $rootScope){
+              if(!$rootScope.isLogin){
+                  $location.path('/login');
+              }
+          }
+      },
             templateUrl: 'pages/film.html',
             controller: 'filmController'
           }).
-          when('/series', {
+          when('/series', {  resolve: {
+                "check" : function($location, $rootScope){
+                    if(!$rootScope.isLogin){
+                        $location.path('/login');
+                    }
+                }
+            },
             templateUrl: 'pages/series.html',
             controller: 'serieController'
           }).
-          otherwise({
-            redirectTo: '/index.'
+          when('/login', {
+
+            templateUrl: 'pages/login.html',
+            controller: 'loginController'
+          })
+          .when('/home', {
+              resolve: {
+                  "check" : function($location, $rootScope){
+                      if(!$rootScope.isLogin){
+                          $location.path('/login');
+                      }
+                  }
+              },
+              templateUrl : 'pages/home.html',
+              controller : 'homeController'
+          })
+          .otherwise({
+            redirectTo: '/logins'
           });
 
 

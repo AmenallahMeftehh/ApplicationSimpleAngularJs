@@ -14,6 +14,8 @@
     <script src="Controllers/mainController.js"></script>
     <script src="Controllers/filmController.js"></script>
     <script src="Controllers/serieController.js"></script>
+    <script src="Controllers/loginController.js"></script>
+    <script src="Controllers/homeController.js"></script>
     <!-- services -->
     <script src="Services/musiciansFactory.js"></script>
     <script src="Services/filmFactory.js"></script>
@@ -31,6 +33,7 @@
     <li class="limenu"><a href="#musique">Musique</a></li>
     <li class="limenu"><a href="#film">Films</a></li>
     <li class="limenu"><a href="#series">SeriesTv</a></li>
+    <li class="limenu"><a ng-show="isLogin" ng-href="#/login" ng-click="logOut()">Logout</a></li>
   </ul>
 </header>
 <body style="margin-top:100px;">
